@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\bin\Debug\С01opora.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\bin\Debug\С01opora.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\obj\Debug\С01opora.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\obj\Debug\С01opora.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\obj\Debug\С01opora.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\С01opora\С01opora\obj\Debug\С01opora.pdb
