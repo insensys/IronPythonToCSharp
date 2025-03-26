@@ -1,0 +1,12 @@
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\LayerColorizer.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\LayerColorizer.pdb
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\accoremgd.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\AcCui.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\acdbmgd.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\AcMNUParser.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\bin\Debug\en-US\acdbmgd.resources.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\obj\Debug\LayerColorizer.csproj.AssemblyReference.cache
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\obj\Debug\LayerColorizer.csproj.CoreCompileInputs.cache
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\obj\Debug\LayerCol.996BE510.Up2Date
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\obj\Debug\LayerColorizer.dll
+D:\09_Programming\RevitAPI\LayerColorizer\LayerColorizer\obj\Debug\LayerColorizer.pdb

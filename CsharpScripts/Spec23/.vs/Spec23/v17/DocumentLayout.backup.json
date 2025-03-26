@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\09_Programming\\RevitAPI\\Spec23\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{499FA436-1FEA-4E1D-9B2A-0B1F53CCB30C}|Spec23\\Spec23.csproj|d:\\09_programming\\revitapi\\spec23\\spec23\\speccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{499FA436-1FEA-4E1D-9B2A-0B1F53CCB30C}|Spec23\\Spec23.csproj|solutionrelative:spec23\\speccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpecCommand.cs",
+              "DocumentMoniker": "D:\\09_Programming\\RevitAPI\\Spec23\\Spec23\\SpecCommand.cs",
+              "RelativeDocumentMoniker": "Spec23\\SpecCommand.cs",
+              "ToolTip": "D:\\09_Programming\\RevitAPI\\Spec23\\Spec23\\SpecCommand.cs*",
+              "RelativeToolTip": "Spec23\\SpecCommand.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwFwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T04:59:35.126Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

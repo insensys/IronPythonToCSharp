@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equalizer04", "Equalizer04\Equalizer04.csproj", "{77374B8D-23EB-4486-AA3C-B66C8F0D769E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77374B8D-23EB-4486-AA3C-B66C8F0D769E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77374B8D-23EB-4486-AA3C-B66C8F0D769E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77374B8D-23EB-4486-AA3C-B66C8F0D769E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77374B8D-23EB-4486-AA3C-B66C8F0D769E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27795B9D-56B4-4965-B92E-9CB74B425A51}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\obj\Debug\ArcToLinePlugin.csproj.AssemblyReference.cache
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\obj\Debug\ArcToLinePlugin.csproj.CoreCompileInputs.cache
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\ArcToLinePlugin.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\ArcToLinePlugin.pdb
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\accoremgd.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\AcCui.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\acdbmgd.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\AcMNUParser.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\bin\Debug\en-US\acdbmgd.resources.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\obj\Debug\ArcToLin.5188ED09.Up2Date
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\obj\Debug\ArcToLinePlugin.dll
+D:\09_Programming\RevitAPI\ArcToLinePlugin\ArcToLinePlugin\obj\Debug\ArcToLinePlugin.pdb

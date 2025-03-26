@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\09_Programming\\RevitAPI\\AutoCad\\Equalizer2SideMulti\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA4CAFDA-A10A-44B1-8E54-F0BBA34A7AF8}|Equalizer2SideMulti\\Equalizer2SideMulti.csproj|d:\\09_programming\\revitapi\\autocad\\equalizer2sidemulti\\equalizer2sidemulti\\equalizer2sidemulti09.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA4CAFDA-A10A-44B1-8E54-F0BBA34A7AF8}|Equalizer2SideMulti\\Equalizer2SideMulti.csproj|solutionrelative:equalizer2sidemulti\\equalizer2sidemulti09.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Equalizer2SideMulti09.cs",
+              "DocumentMoniker": "D:\\09_Programming\\RevitAPI\\AutoCad\\Equalizer2SideMulti\\Equalizer2SideMulti\\Equalizer2SideMulti09.cs",
+              "RelativeDocumentMoniker": "Equalizer2SideMulti\\Equalizer2SideMulti09.cs",
+              "ToolTip": "D:\\09_Programming\\RevitAPI\\AutoCad\\Equalizer2SideMulti\\Equalizer2SideMulti\\Equalizer2SideMulti09.cs",
+              "RelativeToolTip": "Equalizer2SideMulti\\Equalizer2SideMulti09.cs",
+              "ViewState": "AgIAADIAAAAAMjMzMzMhwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:54:52.118Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

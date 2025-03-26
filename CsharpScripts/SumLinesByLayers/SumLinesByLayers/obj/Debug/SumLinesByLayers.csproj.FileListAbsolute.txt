@@ -1,0 +1,12 @@
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\SumLinesByLayers.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\SumLinesByLayers.pdb
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\accoremgd.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\AcCui.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\acdbmgd.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\AcMNUParser.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\bin\Debug\en-US\acdbmgd.resources.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\obj\Debug\SumLinesByLayers.csproj.AssemblyReference.cache
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\obj\Debug\SumLinesByLayers.csproj.CoreCompileInputs.cache
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\obj\Debug\SumLines.28EC61A0.Up2Date
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\obj\Debug\SumLinesByLayers.dll
+D:\09_Programming\RevitAPI\SumLinesByLayers\SumLinesByLayers\obj\Debug\SumLinesByLayers.pdb

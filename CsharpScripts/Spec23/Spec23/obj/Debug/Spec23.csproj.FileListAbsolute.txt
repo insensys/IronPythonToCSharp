@@ -1,0 +1,12 @@
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\Spec23.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\Spec23.pdb
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\accoremgd.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\AcCui.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\acdbmgd.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\AcMNUParser.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\bin\Debug\en-US\acdbmgd.resources.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\obj\Debug\Spec23.csproj.AssemblyReference.cache
+D:\09_Programming\RevitAPI\Spec23\Spec23\obj\Debug\Spec23.csproj.CoreCompileInputs.cache
+D:\09_Programming\RevitAPI\Spec23\Spec23\obj\Debug\Spec23.csproj.Up2Date
+D:\09_Programming\RevitAPI\Spec23\Spec23\obj\Debug\Spec23.dll
+D:\09_Programming\RevitAPI\Spec23\Spec23\obj\Debug\Spec23.pdb
