@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "equalizermult04", "equalizermult04\equalizermult04.csproj", "{0ADE48CD-A1FF-455A-B56F-93F914F6709E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "write_gson03", "write_gson03\write_gson03.csproj", "{F20B2667-E917-4DF1-9D4C-73E81E651B64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0ADE48CD-A1FF-455A-B56F-93F914F6709E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ADE48CD-A1FF-455A-B56F-93F914F6709E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ADE48CD-A1FF-455A-B56F-93F914F6709E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0ADE48CD-A1FF-455A-B56F-93F914F6709E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20B2667-E917-4DF1-9D4C-73E81E651B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20B2667-E917-4DF1-9D4C-73E81E651B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20B2667-E917-4DF1-9D4C-73E81E651B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20B2667-E917-4DF1-9D4C-73E81E651B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {12585563-CCC3-454B-971F-B69A47D32CC3}
+		SolutionGuid = {2979C2CF-703F-459A-A78F-8E725FAF7A50}
 	EndGlobalSection
 EndGlobal

@@ -1,12 +1,6 @@
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\equalizermult04.dll
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\equalizermult04.pdb
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\accoremgd.dll
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\AcCui.dll
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\acdbmgd.dll
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\AcMNUParser.dll
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\en-US\acdbmgd.resources.dll
 D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\obj\Debug\equalizermult04.csproj.AssemblyReference.cache
 D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\obj\Debug\equalizermult04.csproj.CoreCompileInputs.cache
-D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\obj\Debug\equalize.3AEAA4EF.Up2Date
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\equalizermult04.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\bin\Debug\equalizermult04.pdb
 D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\obj\Debug\equalizermult04.dll
 D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\equalizermult04\equalizermult04\obj\Debug\equalizermult04.pdb

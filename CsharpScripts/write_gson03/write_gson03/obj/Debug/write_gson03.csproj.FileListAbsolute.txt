@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\bin\Debug\write_gson03.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\bin\Debug\write_gson03.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\obj\Debug\write_gson03.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\obj\Debug\write_gson03.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\obj\Debug\write_gson03.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\write_gson03\write_gson03\obj\Debug\write_gson03.pdb

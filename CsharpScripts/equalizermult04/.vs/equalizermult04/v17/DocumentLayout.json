@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\equalizermult04\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD258C40-7794-4064-A9EF-8A6C410D5EC8}|equalizermult04\\equalizermult04.csproj|d:\\00_armirovanie\\ironpythonto_csharp\\csharpscripts\\equalizermult04\\equalizermult04\\equalizermult04command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD258C40-7794-4064-A9EF-8A6C410D5EC8}|equalizermult04\\equalizermult04.csproj|solutionrelative:equalizermult04\\equalizermult04command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0ADE48CD-A1FF-455A-B56F-93F914F6709E}|equalizermult04\\equalizermult04.csproj|d:\\00_armirovanie\\ironpythonto_csharp\\csharpscripts\\equalizermult04\\equalizermult04\\equalizermult04command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ADE48CD-A1FF-455A-B56F-93F914F6709E}|equalizermult04\\equalizermult04.csproj|solutionrelative:equalizermult04\\equalizermult04command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ADE48CD-A1FF-455A-B56F-93F914F6709E}|equalizermult04\\equalizermult04.csproj|d:\\00_armirovanie\\ironpythonto_csharp\\csharpscripts\\equalizermult04\\equalizermult04\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ADE48CD-A1FF-455A-B56F-93F914F6709E}|equalizermult04\\equalizermult04.csproj|solutionrelative:equalizermult04\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "equalizermult04\\equalizermult04Command.cs",
               "ToolTip": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\equalizermult04\\equalizermult04\\equalizermult04Command.cs",
               "RelativeToolTip": "equalizermult04\\equalizermult04Command.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowEcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAF8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:15:15.856Z",
+              "WhenOpened": "2025-03-26T15:41:16.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\equalizermult04\\equalizermult04\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "equalizermult04\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\equalizermult04\\equalizermult04\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "equalizermult04\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:40:00.883Z",
               "EditorCaption": ""
             }
           ]

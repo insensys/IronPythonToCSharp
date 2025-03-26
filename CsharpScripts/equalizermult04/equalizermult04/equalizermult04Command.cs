@@ -1,239 +1,288 @@
-﻿using Autodesk.AutoCAD.ApplicationServices;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
-using Autodesk.AutoCAD.Geometry;
-using Autodesk.AutoCAD.Runtime;
-using System;
-using System.Collections.Generic;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace equalizermult04
+// Пространства имён могут немного отличаться в зависимости от версии AutoCAD.
+
+namespace equalizermulpti04
 {
-    public class equalizermult04Command
+    public class equalizermulpti04Commands
     {
-        // Небольшая погрешность для сравнения расстояний
-        private const double epsilon = 0.001;
+        // ================================
+        // 1) Вспомогательные функции
+        // ================================
 
-        // Функция расстояния между двумя точками
-        private double Dist(Point3d a, Point3d b)
+        /// <summary>
+        /// Вычисление 3D расстояния между двумя точками (x,y,z)
+        /// </summary>
+        private static double Dist(double[] a, double[] b)
         {
-            double dx = b.X - a.X;
-            double dy = b.Y - a.Y;
-            double dz = b.Z - a.Z;
+            double dx = b[0] - a[0];
+            double dy = b[1] - a[1];
+            double dz = b[2] - a[2];
             return Math.Sqrt(dx * dx + dy * dy + dz * dz);
         }
 
-        // Поиск промежуточных точек между pnt1 и pnt2 из общего списка
-        private List<Point3d> SelectPointsBetween2Points(
-            Point3d pnt1,
-            Point3d pnt2,
-            List<Point3d> allPoints)
+        /// <summary>
+        /// Простая функция для создания массива вида (x,y,z)
+        /// </summary>
+        private static double[] MakeArray3d(double x, double y, double z)
         {
-            double baseLen = Dist(pnt1, pnt2);
-            List<Point3d> selected = new List<Point3d>();
-
-            foreach (Point3d p in allPoints)
-            {
-                // Проверяем, лежит ли точка p почти на отрезке [pnt1, pnt2]
-                double distA = Dist(pnt1, p);
-                double distB = Dist(p, pnt2);
-                double diff = baseLen - distA - distB;
-
-                if (Math.Abs(diff) < epsilon)
-                {
-                    selected.Add(p);
-                }
-            }
-
-            // Сортируем точки по расстоянию от pnt1
-            selected.Sort((p1, p2) => Dist(pnt1, p1).CompareTo(Dist(pnt1, p2)));
-
-            // Убираем слишком близкие дубликаты
-            List<Point3d> unique = new List<Point3d>();
-            foreach (Point3d p in selected)
-            {
-                if (unique.Count == 0 ||
-                    Dist(p, unique[unique.Count - 1]) > epsilon)
-                {
-                    unique.Add(p);
-                }
-            }
-
-            return unique;
+            return new double[] { x, y, z };
         }
 
-        // Простая линейная интерполяция
-        private double Interp(double n1, double n2, double k, double total)
-        {
-            // (n2 - n1) * (k / total) + n1
-            return (n2 - n1) * (k / total) + n1;
-        }
+        // ================================
+        // 2) Основная команда
+        // ================================
 
-        [CommandMethod("EQUALIZERMULT04")]
-        public void RunCommand()
+        [CommandMethod("EQUALIZER04_CS")]
+        public void Equalizer04Command()
         {
-            // Текущий документ и редактор
             Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;
             Editor ed = doc.Editor;
-            Database db = doc.Database;
 
-            // Список всех собранных точек
-            List<Point3d> allPoints = new List<Point3d>();
+            // Список всех 3D-точек, полученных из выбранных объектов
+            List<double[]> allPoints = new List<double[]>();
 
-            // 1) Выбор объектов, сбор точек
-            PromptSelectionOptions selOpts = new PromptSelectionOptions();
-            selOpts.MessageForAdding = "\nВыберите объекты (DBPoint, Line, Face)...";
+            // ---------------------------------
+            // 2.1. Просим пользователя выбрать объекты
+            // ---------------------------------
+            PromptSelectionOptions selOpt = new PromptSelectionOptions
+            {
+                MessageForAdding = "\nВыберите точки, линии, 3D Face и т.п.: "
+            };
+            PromptSelectionResult selRes = ed.GetSelection(selOpt);
 
-            PromptSelectionResult selRes = ed.GetSelection(selOpts);
             if (selRes.Status != PromptStatus.OK)
             {
                 ed.WriteMessage("\nНичего не выбрано.");
                 return;
             }
 
-            using (Transaction tr = db.TransactionManager.StartTransaction())
+            SelectionSet sset = selRes.Value;
+
+            // ---------------------------------
+            // 2.2. Извлекаем координаты точек из выбранных объектов
+            // ---------------------------------
+            using (Transaction tr = doc.TransactionManager.StartTransaction())
             {
-                SelectionSet ss = selRes.Value;
-                foreach (SelectedObject selObj in ss)
+                foreach (SelectedObject sobj in sset)
                 {
-                    if (selObj == null) continue;
-                    Entity ent = tr.GetObject(selObj.ObjectId, OpenMode.ForRead) as Entity;
+                    if (sobj == null) continue;
+                    Entity ent = tr.GetObject(sobj.ObjectId, OpenMode.ForRead) as Entity;
                     if (ent == null) continue;
 
-                    // Если это точка
+                    // Если это DBPoint
                     if (ent is DBPoint dbp)
                     {
-                        allPoints.Add(dbp.Position);
+                        allPoints.Add(MakeArray3d(dbp.Position.X, dbp.Position.Y, dbp.Position.Z));
                     }
-                    // Если это линия
+                    // Если это Line
                     else if (ent is Line ln)
                     {
-                        allPoints.Add(ln.StartPoint);
-                        allPoints.Add(ln.EndPoint);
+                        allPoints.Add(MakeArray3d(ln.StartPoint.X, ln.StartPoint.Y, ln.StartPoint.Z));
+                        allPoints.Add(MakeArray3d(ln.EndPoint.X, ln.EndPoint.Y, ln.EndPoint.Z));
                     }
-                    // Если это 3D Face
-                    else if (ent is Face fc)
+                    // Если это Face (старый AutoCAD 3DFace)
+                    else if (ent is Face face)
                     {
-                        allPoints.Add(fc.GetVertexAt(0));
-                        allPoints.Add(fc.GetVertexAt(1));
-                        allPoints.Add(fc.GetVertexAt(2));
-                        allPoints.Add(fc.GetVertexAt(3));
+                        // Face имеет 4 вершины
+                        for (int i = 0; i < 4; i++)
+                        {
+                            var v = face.GetVertexAt((short)i);
+                            allPoints.Add(MakeArray3d(v.X, v.Y, v.Z));
+                        }
                     }
+                    // Можно расширять для других типов (Polyline, Mesh и т.д.)
                 }
                 tr.Commit();
             }
 
-            // 2) Просим пользователя указать первую и вторую точку (pnt1, pnt2)
-            PromptPointResult ppr1 = ed.GetPoint("\nУкажите первую точку (pnt1): ");
-            if (ppr1.Status != PromptStatus.OK) return;
-            Point3d pnt1 = ppr1.Value;
+            // ---------------------------------
+            // 2.3. Запрашиваем у пользователя 2 точки в пространстве
+            // ---------------------------------
+            var pntRes1 = ed.GetPoint("\nУкажите первую точку (pnt1): ");
+            if (pntRes1.Status != PromptStatus.OK) return;
+            var pnt1 = pntRes1.Value;  // это Point3d
 
-            PromptPointResult ppr2 = ed.GetPoint("\nУкажите вторую точку (pnt2): ");
-            if (ppr2.Status != PromptStatus.OK) return;
-            Point3d pnt2 = ppr2.Value;
+            var pntRes2 = ed.GetPoint("\nУкажите вторую точку (pnt2): ");
+            if (pntRes2.Status != PromptStatus.OK) return;
+            var pnt2 = pntRes2.Value;  // это Point3d
 
-            // Находим промежуточные точки между pnt1 и pnt2
-            List<Point3d> midpoints = SelectPointsBetween2Points(pnt1, pnt2, allPoints);
+            double[] arr1 = MakeArray3d(pnt1.X, pnt1.Y, pnt1.Z);
+            double[] arr2 = MakeArray3d(pnt2.X, pnt2.Y, pnt2.Z);
+            double dist12 = Dist(arr1, arr2);
 
-            // Количество «сегментов» на этом отрезке в итоге будет midpoints.Count+1
-            int kancha = midpoints.Count + 1;
-            ed.WriteMessage($"\nМежду pnt1 и pnt2 получено {midpoints.Count} промежуточных точек.");
+            // ---------------------------------
+            // 2.4. Ищем промежуточные точки, которые лежат на отрезке pnt1->pnt2
+            // ---------------------------------
+            double eps = 0.001; // "pushinka" в оригинале
+            List<double[]> selectedBetween = new List<double[]>();
 
-            // 3) Третья точка (pnt3) и количество разбиений
-            PromptPointResult ppr3 = ed.GetPoint("\nУкажите третью точку (pnt3): ");
-            if (ppr3.Status != PromptStatus.OK) return;
-            Point3d pnt3 = ppr3.Value;
-
-            PromptIntegerResult pir = ed.GetInteger("\nСколько раз поделить отрезок pnt2–pnt3?: ");
-            if (pir.Status != PromptStatus.OK) return;
-            int kancha2 = pir.Value;
-
-            // 4) Четвёртая точка (pnt4)
-            PromptPointResult ppr4 = ed.GetPoint("\nУкажите четвёртую точку (pnt4): ");
-            if (ppr4.Status != PromptStatus.OK) return;
-            Point3d pnt4 = ppr4.Value;
-
-            // 5) Создаём двумерный массив P (размер: (kancha2+1) x (kancha+1))
-            //    в котором будем хранить координаты новых точек
-            Point3d[,] P = new Point3d[kancha2 + 1, kancha + 1];
-
-            // Заполняем верхнюю строку (j=0)
-            // Первая строка идёт по отрезку pnt1->pnt2, включая midpoints
-            P[0, 0] = pnt1;
-            P[0, kancha - 1] = (midpoints.Count > 0) ? midpoints[midpoints.Count - 1] : pnt1;
-            // Но аккуратнее — чуть ниже мы их переопределим. Проще задать циклом:
-
-            // Запишем первую строку, используя midpoints
-            // pnt1 -> midpoints -> pnt2
-            // midpoints упорядочены, потому в ячейках 1..midpoints.Count будут промежуточные точки
-            if (midpoints.Count > 0)
+            foreach (var p in allPoints)
             {
-                for (int i = 0; i < midpoints.Count; i++)
+                double A = Dist(arr1, p);   // расстояние pnt1 -> p
+                double B = Dist(p, arr2);   // расстояние p -> pnt2
+                double sum = A + B;
+
+                // Проверяем, что сумма A+B примерно равна dist12 => значит точка на одной прямой
+                if (Math.Abs(dist12 - sum) < eps)
                 {
-                    P[0, i + 1] = midpoints[i];
-                }
-            }
-            // Последняя колонка (pnt2)
-            P[0, kancha - 1] = pnt2;
-
-            // Заполняем нижнюю строку (j=kancha2) => pnt4->pnt3 (или наоборот, в зависимости от логики)
-            // В оригинальном скрипте pnt4 [kancha2,0], pnt3 [kancha2,kancha]
-            P[kancha2, 0] = pnt4;
-            P[kancha2, kancha - 1] = pnt3;
-
-            // Линейная интерполяция по горизонтали
-            for (int col = 1; col < kancha - 1; col++)
-            {
-                // col меняется от 1 до (kancha-2)
-                // P[kancha2, col] = линейная интерполяция между pnt4 и pnt3
-                double t = (double)col / (double)(kancha - 1);
-                double newX = Interp(pnt4.X, pnt3.X, col, kancha - 1);
-                double newY = Interp(pnt4.Y, pnt3.Y, col, kancha - 1);
-                double newZ = Interp(pnt4.Z, pnt3.Z, col, kancha - 1);
-
-                P[kancha2, col] = new Point3d(newX, newY, newZ);
-            }
-
-            // Теперь вертикальная интерполяция между верхней и нижней строкой
-            for (int col = 0; col < kancha; col++)
-            {
-                Point3d topPt = P[0, col];
-                Point3d botPt = P[kancha2, col];
-                for (int row = 1; row < kancha2; row++)
-                {
-                    double frac = (double)row / (double)kancha2;
-                    double newX = Interp(topPt.X, botPt.X, row, kancha2);
-                    double newY = Interp(topPt.Y, botPt.Y, row, kancha2);
-                    double newZ = Interp(topPt.Z, botPt.Z, row, kancha2);
-                    P[row, col] = new Point3d(newX, newY, newZ);
-                }
-            }
-
-            // 6) Создаём 3D Face на каждой «ячейке» сетки
-            //    идём по строкам 0..(kancha2-1) и столбцам 0..(kancha-1)
-            using (Transaction trFaces = db.TransactionManager.StartTransaction())
-            {
-                BlockTable bt = (BlockTable)trFaces.GetObject(db.BlockTableId, OpenMode.ForRead);
-                BlockTableRecord btr = (BlockTableRecord)trFaces.GetObject(db.CurrentSpaceId, OpenMode.ForWrite);
-
-                for (int row = 0; row < kancha2; row++)
-                {
-                    for (int col = 0; col < kancha - 1; col++)
+                    // берем точку, но исключаем саму pnt1 или pnt2, если хотим
+                    if (A > eps && B > eps)
                     {
-                        Point3d p1 = P[row, col];
-                        Point3d p2 = P[row, col + 1];
-                        Point3d p3 = P[row + 1, col + 1];
-                        Point3d p4 = P[row + 1, col];
-
-                        Face face = new Face(p1, p2, p3, p4, true, true, true, true);
-                        btr.AppendEntity(face);
-                        trFaces.AddNewlyCreatedDBObject(face, true);
+                        selectedBetween.Add(p);
                     }
                 }
-                trFaces.Commit();
             }
 
-            ed.WriteMessage("\nГотово! Созданы 3D-лица по сетке.");
+            // Сортируем промежуточные точки по расстоянию от pnt1
+            selectedBetween = selectedBetween
+                .OrderBy(p => Dist(arr1, p))
+                .ToList();
+
+            // Убираем дубликаты, которые близко друг к другу
+            List<double[]> midPoints = new List<double[]>();
+            foreach (var candidate in selectedBetween)
+            {
+                if (midPoints.Count == 0)
+                {
+                    midPoints.Add(candidate);
+                }
+                else
+                {
+                    var last = midPoints[midPoints.Count - 1];
+                    if (Dist(last, candidate) > eps)
+                    {
+                        midPoints.Add(candidate);
+                    }
+                }
+            }
+
+            // Число найденных промежуточных точек + 2 (pnt1 и pnt2) => кол-во сегментов
+            int kancha = midPoints.Count + 1;
+
+            ed.WriteMessage($"\nМежду этими точками всего сегментов: {kancha}.");
+
+            // ---------------------------------
+            // 2.5. Запрашиваем у пользователя ещё 2 точки (pnt3, pnt4) + число разбиений
+            // ---------------------------------
+            var pntRes3 = ed.GetPoint("\nУкажите третью точку (pnt3): ");
+            if (pntRes3.Status != PromptStatus.OK) return;
+            var pnt3 = pntRes3.Value;
+
+            var intRes = ed.GetInteger("\nСколько раз разбить между pnt2 и pnt3?: ");
+            if (intRes.Status != PromptStatus.OK) return;
+            int kancha2 = intRes.Value; // кол-во «строк» или «рядиов» при делении
+
+            var pntRes4 = ed.GetPoint("\nУкажите четвёртую точку (pnt4): ");
+            if (pntRes4.Status != PromptStatus.OK) return;
+            var pnt4 = pntRes4.Value;
+
+            // ---------------------------------
+            // 2.6. Строим 3D Face-сетку (аналог point_matrix + Add3DFace)
+            // ---------------------------------
+            using (Transaction tr = doc.TransactionManager.StartTransaction())
+            {
+                BlockTableRecord btr = tr.GetObject(
+                    doc.Database.CurrentSpaceId, OpenMode.ForWrite
+                ) as BlockTableRecord;
+
+                // Подготовим массив точек P размером (kancha2+1) x (kancha+1)
+                double[,,] P = new double[kancha2 + 1, kancha + 1, 3];
+
+                // Заполним "верхнюю" строку (j=0) точками pnt1->pnt2
+                // midPoints - это промежуточные
+                // P[0][0] = pnt1, P[0][kancha] = pnt2
+                // и т.д.
+
+                // 1) Запишем pnt1 и pnt2
+                P[0, 0, 0] = pnt1.X; P[0, 0, 1] = pnt1.Y; P[0, 0, 2] = pnt1.Z;
+                P[0, kancha, 0] = pnt2.X; P[0, kancha, 1] = pnt2.Y; P[0, kancha, 2] = pnt2.Z;
+
+                // 2) Запишем pnt3 и pnt4 в "нижнюю" строку (j = kancha2)
+                P[kancha2, kancha, 0] = pnt3.X; P[kancha2, kancha, 1] = pnt3.Y; P[kancha2, kancha, 2] = pnt3.Z;
+                P[kancha2, 0, 0] = pnt4.X; P[kancha2, 0, 1] = pnt4.Y; P[kancha2, 0, 2] = pnt4.Z;
+
+                // 3) Заполняем промежуточные точки по «верхней» строке (j=0, i=1..kancha-1)
+                for (int i = 1; i < kancha; i++)
+                {
+                    var mp = midPoints[i - 1];
+                    P[0, i, 0] = mp[0];
+                    P[0, i, 1] = mp[1];
+                    P[0, i, 2] = mp[2];
+                }
+
+                // 4) Заполним «нижнюю» строку (j=kancha2) интерполяцией между pnt4 и pnt3
+                for (int i = 1; i < kancha; i++)
+                {
+                    double t = (double)i / (double)kancha;
+                    // интерполяция по X
+                    P[kancha2, i, 0] = pnt4.X + t * (pnt3.X - pnt4.X);
+                    // интерполяция по Y
+                    P[kancha2, i, 1] = pnt4.Y + t * (pnt3.Y - pnt4.Y);
+                    // интерполяция по Z
+                    P[kancha2, i, 2] = pnt4.Z + t * (pnt3.Z - pnt4.Z);
+                }
+
+                // 5) Заполняем внутренние точки (по j=1..kancha2-1; i=0..kancha)
+                // линейная интерполяция между «верхней» и «нижней» строками
+                for (int j = 1; j < kancha2; j++)
+                {
+                    double tj = (double)j / (double)kancha2;
+                    for (int i = 0; i <= kancha; i++)
+                    {
+                        double xTop = P[0, i, 0];
+                        double yTop = P[0, i, 1];
+                        double zTop = P[0, i, 2];
+
+                        double xBot = P[kancha2, i, 0];
+                        double yBot = P[kancha2, i, 1];
+                        double zBot = P[kancha2, i, 2];
+
+                        double xVal = xTop + tj * (xBot - xTop);
+                        double yVal = yTop + tj * (yBot - yTop);
+                        double zVal = zTop + tj * (zBot - zTop);
+
+                        P[j, i, 0] = xVal;
+                        P[j, i, 1] = yVal;
+                        P[j, i, 2] = zVal;
+                    }
+                }
+
+                // 6) Теперь формируем 3D Face для каждой ячейки сетки
+                // (kancha2 x kancha) квадратиков
+                for (int j = 0; j < kancha2; j++)
+                {
+                    for (int i = 0; i < kancha; i++)
+                    {
+                        // 4 вершины квадрата (j,i), (j,i+1), (j+1,i+1), (j+1,i)
+                        double[] p1 = { P[j, i, 0], P[j, i, 1], P[j, i, 2] };
+                        double[] p2 = { P[j, i + 1, 0], P[j, i + 1, 1], P[j, i + 1, 2] };
+                        double[] p3 = { P[j + 1, i + 1, 0], P[j + 1, i + 1, 1], P[j + 1, i + 1, 2] };
+                        double[] p4 = { P[j + 1, i, 0], P[j + 1, i, 1], P[j + 1, i, 2] };
+
+                        Face face = new Face(
+                            new Autodesk.AutoCAD.Geometry.Point3d(p1[0], p1[1], p1[2]),
+                            new Autodesk.AutoCAD.Geometry.Point3d(p2[0], p2[1], p2[2]),
+                            new Autodesk.AutoCAD.Geometry.Point3d(p3[0], p3[1], p3[2]),
+                            new Autodesk.AutoCAD.Geometry.Point3d(p4[0], p4[1], p4[2]),
+                            true, true, true, true
+                        );
+
+                        btr.AppendEntity(face);
+                        tr.AddNewlyCreatedDBObject(face, true);
+                    }
+                }
+
+                tr.Commit();
+            }
+
+            ed.WriteMessage("\nСкрипт завершён. Сетка 3D Face создана.");
         }
     }
 }
