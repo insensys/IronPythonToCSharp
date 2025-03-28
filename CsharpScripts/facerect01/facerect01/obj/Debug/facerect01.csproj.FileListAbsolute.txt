@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\bin\Debug\facerect01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\bin\Debug\facerect01.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\obj\Debug\facerect01.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\obj\Debug\facerect01.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\obj\Debug\facerect01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facerect01\facerect01\obj\Debug\facerect01.pdb
