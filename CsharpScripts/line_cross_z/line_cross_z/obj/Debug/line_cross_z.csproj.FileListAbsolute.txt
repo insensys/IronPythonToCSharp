@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\bin\Debug\line_cross_z.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\bin\Debug\line_cross_z.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\obj\Debug\line_cross_z.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\obj\Debug\line_cross_z.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\obj\Debug\line_cross_z.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\line_cross_z\line_cross_z\obj\Debug\line_cross_z.pdb

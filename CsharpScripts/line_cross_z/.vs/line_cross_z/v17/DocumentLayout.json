@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\line_cross_z\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0242F262-F9FF-490D-9073-A2723EDAFF0C}|line_cross_z\\line_cross_z.csproj|d:\\00_armirovanie\\ironpythonto_csharp\\csharpscripts\\line_cross_z\\line_cross_z\\line_cross_zcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0242F262-F9FF-490D-9073-A2723EDAFF0C}|line_cross_z\\line_cross_z.csproj|solutionrelative:line_cross_z\\line_cross_zcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "line_cross_zCommand.cs",
+              "DocumentMoniker": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\line_cross_z\\line_cross_z\\line_cross_zCommand.cs",
+              "RelativeDocumentMoniker": "line_cross_z\\line_cross_zCommand.cs",
+              "ToolTip": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\line_cross_z\\line_cross_z\\line_cross_zCommand.cs",
+              "RelativeToolTip": "line_cross_z\\line_cross_zCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:45:25.891Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
