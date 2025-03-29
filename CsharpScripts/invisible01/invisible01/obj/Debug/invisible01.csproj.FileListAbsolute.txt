@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\bin\Debug\invisible01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\bin\Debug\invisible01.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\obj\Debug\invisible01.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\obj\Debug\invisible01.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\obj\Debug\invisible01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\invisible01\invisible01\obj\Debug\invisible01.pdb
