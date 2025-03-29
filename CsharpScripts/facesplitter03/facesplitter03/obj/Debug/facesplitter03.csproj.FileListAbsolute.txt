@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\bin\Debug\facesplitter03.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\bin\Debug\facesplitter03.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\obj\Debug\facesplitter03.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\obj\Debug\facesplitter03.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\obj\Debug\facesplitter03.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\facesplitter03\facesplitter03\obj\Debug\facesplitter03.pdb
