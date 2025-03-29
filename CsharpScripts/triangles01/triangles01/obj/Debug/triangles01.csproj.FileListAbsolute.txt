@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\bin\Debug\triangles01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\bin\Debug\triangles01.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\obj\Debug\triangles01.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\obj\Debug\triangles01.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\obj\Debug\triangles01.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\triangles01\triangles01\obj\Debug\triangles01.pdb
