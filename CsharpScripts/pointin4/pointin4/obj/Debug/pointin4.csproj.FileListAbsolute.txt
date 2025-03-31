@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\bin\Debug\pointin4.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\bin\Debug\pointin4.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\obj\Debug\pointin4.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\obj\Debug\pointin4.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\obj\Debug\pointin4.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\pointin4\pointin4\obj\Debug\pointin4.pdb
