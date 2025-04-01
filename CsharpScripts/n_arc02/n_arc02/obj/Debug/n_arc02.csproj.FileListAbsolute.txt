@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\bin\Debug\n_arc02.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\bin\Debug\n_arc02.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\obj\Debug\n_arc02.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\obj\Debug\n_arc02.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\obj\Debug\n_arc02.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\n_arc02\n_arc02\obj\Debug\n_arc02.pdb
