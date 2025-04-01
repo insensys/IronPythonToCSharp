@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\linecutter06\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{557BA6DB-37CE-46AE-9165-AF3A700FFE6A}|linecutter06\\linecutter06.csproj|d:\\00_armirovanie\\ironpythonto_csharp\\csharpscripts\\linecutter06\\linecutter06\\linecutter06command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{557BA6DB-37CE-46AE-9165-AF3A700FFE6A}|linecutter06\\linecutter06.csproj|solutionrelative:linecutter06\\linecutter06command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "linecutter06Command.cs",
+              "DocumentMoniker": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\linecutter06\\linecutter06\\linecutter06Command.cs",
+              "RelativeDocumentMoniker": "linecutter06\\linecutter06Command.cs",
+              "ToolTip": "D:\\00_Armirovanie\\IronPythonTo_Csharp\\CsharpScripts\\linecutter06\\linecutter06\\linecutter06Command.cs*",
+              "RelativeToolTip": "linecutter06\\linecutter06Command.cs*",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAQwH8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T12:47:15.434Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

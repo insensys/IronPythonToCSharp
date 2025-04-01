@@ -1,0 +1,6 @@
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\bin\Debug\linecutter06.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\bin\Debug\linecutter06.pdb
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\obj\Debug\linecutter06.csproj.AssemblyReference.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\obj\Debug\linecutter06.csproj.CoreCompileInputs.cache
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\obj\Debug\linecutter06.dll
+D:\00_Armirovanie\IronPythonTo_Csharp\CsharpScripts\linecutter06\linecutter06\obj\Debug\linecutter06.pdb
